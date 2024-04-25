@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!
+{% endblock %}
+
+{% block body %}
+
+	<div class="container">
+		<h3 class="text-success">
+			Si vede la scritta verde??
+		</h3>
+	</div>
+	<div class="container">
+		<h1 class='text-danger'>Hello
+			{{ controller_name }}! ✅</h1>
+
+		This friendly message is coming from:
+		<ul>
+			<li>Your controller at
+				<code>PATH_TO_PROJECT/second_symfony_proj/src/Controller/HomeController.php</code>
+			</li>
+			<li>Your template at
+				<code>PATH_TO_PROJECT/second_symfony_proj/templates/home/index.html.twig</code>
+			</li>
+		</ul>
+
+	</div>
+{% endblock %}
