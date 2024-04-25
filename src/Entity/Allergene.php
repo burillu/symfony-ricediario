@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\AllergeneRepository;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: AllergeneRepository::class)]
@@ -18,6 +19,14 @@ class Allergene
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $description = null;
+
+    #[ORM\ManyToMany(targetEntity: "Ingrediente")]
+    private $allergeneIngrediente;
+
+    public function __constructor()
+    {
+        $this->allergeneIngrediente = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
