@@ -1,3 +1,16 @@
+# Ricediario
+
+Applicazione per inserire le tue ricette e creare un menù settimanale.
+
+### Vantaggi:
+
+- Basta **spreco** di tempo per **decidere** cosa cucinare: Avrai già un menù stabilito per cosa dovrai fare per tutta la settimana con la lista della spesa già compilata! Di base avrai una proposta casuale, che potrai modificare nel caso non ti piaccia;
+- Basta **monotonia**! Sai fare tante ricette! Falle girare...;
+- Stabilisci quale ricetta sarà un **pranzo** o una **cena** a seconda della tua **dieta**;
+- Inserendo la ricetta, includi anche gli ingredienti e i relativi allergeni: potrai filtrare in seguito le ricette idonee per persone celiache, intolleranti al lattosio o con altre intolleranze alimentari.
+
+
+
 # Installazione di Symfony con Bootstrap 5
 
 Una volta clonata la repo, basterà fare:
@@ -75,5 +88,4 @@ npm run dev
 #attivo il server di sviluppo di npm e a questo punto le classi di bootstrap  (container, text-success ....) dovrebbero essere funzionanti.
 npm run dev-server
 ```
-
 
