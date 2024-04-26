@@ -23,11 +23,12 @@ class Recipe
     #[ORM\Column(nullable: true, length: 5)]
     private ?int $calories = null;
 
-    #[ORM\Column(type: Types::BIGINT)]
-    private ?string $id_pasto = null;
+    #[ORM\ManyToOne(inversedBy: 'recipes')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Pasto $pasto = null;
 
-    #[ORM\Column(type: Types::BIGINT, nullable: true)]
-    private ?string $id_voto = null;
+    #[ORM\ManyToOne(inversedBy: 'recipes')]
+    private ?Voto $voto = null;
 
     public function getId(): ?int
     {
@@ -70,26 +71,26 @@ class Recipe
         return $this;
     }
 
-    public function getIdPasto(): ?string
+    public function getPasto(): ?Pasto
     {
-        return $this->id_pasto;
+        return $this->pasto;
     }
 
-    public function setIdPasto(string $id_pasto): static
+    public function setPasto(?Pasto $pasto): static
     {
-        $this->id_pasto = $id_pasto;
+        $this->pasto = $pasto;
 
         return $this;
     }
 
-    public function getIdVoto(): ?string
+    public function getVoto(): ?Voto
     {
-        return $this->id_voto;
+        return $this->voto;
     }
 
-    public function setIdVoto(?string $id_voto): static
+    public function setVoto(?Voto $voto): static
     {
-        $this->id_voto = $id_voto;
+        $this->voto = $voto;
 
         return $this;
     }
